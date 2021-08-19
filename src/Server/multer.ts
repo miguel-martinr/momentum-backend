@@ -1,8 +1,12 @@
 import multer from "multer";
+import path from 'path';
 
 export const upload = multer({
-  limits: {
-    fileSize: 6,
-  }
+  storage: multer.diskStorage({
+    destination: 'tempImages/',
+    filename: (req, file, cb) => {
+      cb(null, Date.now() + path.extname(file.originalname));
+    }
+  })
 });
 

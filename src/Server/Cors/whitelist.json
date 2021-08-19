@@ -1,0 +1,9 @@
+{
+  "whitelist": [
+    "http://localhost:3000"
+  ],
+
+  "whitePatterns": [
+    "http://192.168.1.[0-9]{1,3}:3000"
+  ]
+}
